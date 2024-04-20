@@ -1,38 +1,82 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(218, 23%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 55vh;
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: relative;
+  background-color: #313A49;
+}
+p{
+  color: hsl(150, 100%, 66%);
+  font-size: 0.8rem;
+}
+h2{
+  margin-top: 2rem;
+  color: white;
+  font-size: 1rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider-mobile{
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.divider-desktop{
+  margin: 3rem;
+  width: 18rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dice{
+  background: hsl(150, 100%, 66%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2rem;
 }
-
-.App-link {
-  color: #61dafb;
+.dice:hover{
+  transition: .2s ease-in;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 924px){
+  .divider-mobile {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .divider-desktop {
+    display: none;
   }
-}
+ }
+ @media(max-width: 620px){
+  .card {
+    width: 90%;
+  }
+
+  @media(max-width: 375px){
+    h2 {
+      font-size: 1rem;
+    } 
+    p {
+      font-size: .8rem;
+    }
+  }
+ }
